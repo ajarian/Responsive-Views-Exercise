@@ -1,0 +1,58 @@
+<div class="container table-container">
+  <div class="table-section">
+    <div class="row">
+        <div class="col-7 col-md-9 section-text">Section</div>
+        <div class="col-4 col-md-2 col-xl-2 new-category" (click)="onNewCategory()"><span [class.addDisabled]="!this.isCategorySaved">+ ADD CATEGORY</span></div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <table mat-table #categoryTable cdkDropList [cdkDropListData]="totalCategoryRows" (cdkDropListDropped)="onRowDropped($event)" [dataSource]="totalCategoryRows">
+          <!-- Drag Drop Column -->
+          <ng-container matColumnDef="drag">  
+            <th mat-header-cell class="drag-header" *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let element" cdkDragHandle [class.even-row]="element.sequence % 2 === 0">
+              <mat-icon class="drag-handle" svgIcon="drag-handle"></mat-icon>
+            </td>
+          </ng-container>
+
+          <!-- Category Name Column -->
+          <ng-container matColumnDef="category">  
+            <th mat-header-cell class="category-header" *matHeaderCellDef>CATEGORY</th>
+            <td mat-cell *matCellDef="let element" [class.even-row]="element.sequence % 2 === 0">
+              <ng-container *ngIf="!element.name">
+                  <input class="category-input" matInput [(ngModel)]="categoryNames[element.sequence - 1]" placeholder="Category Name">
+              </ng-container>
+              <ng-container *ngIf="element.name">
+                <span class="category-name"></span>{{element.name}}
+              </ng-container>
+            </td>
+          </ng-container>
+
+          <!-- Sequence Column -->
+          <ng-container matColumnDef="sequence">  
+            <th mat-header-cell class="sequence-header" *matHeaderCellDef>SEQ.</th>
+            <td mat-cell *matCellDef="let element" [class.even-row]="element.sequence % 2 === 0">
+              <div class="sequence-box"><span class="sequence-value">{{element.sequence}}</span></div>
+            </td>
+          </ng-container>
+
+          <!-- Save/Delete Column -->
+          <ng-container matColumnDef="saveDelete">  
+              <th mat-header-cell class="saveDelete-header" *matHeaderCellDef></th>
+              <td mat-cell *matCellDef="let element" class="saveDelete-cell" [class.even-row]="element.sequence % 2 === 0" (click)="onCategorySaveDelete(element.sequence - 1, element.nameSaved)">
+                <ng-container *ngIf="!element.nameSaved">
+                  <span class="save-text">SAVE</span>
+                </ng-container>
+                <ng-container *ngIf="element.nameSaved">
+                  <span class="delete-icon"><mat-icon svgIcon="delete"></mat-icon></span>
+                </ng-container>
+              </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="tableColumns"></tr>
+          <tr cdkDrag mat-row *matRowDef="let row; columns: tableColumns"></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div> 

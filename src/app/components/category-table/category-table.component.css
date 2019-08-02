@@ -1,0 +1,246 @@
+.table-section {
+    margin-top: 40px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px 0 rgba(10, 54, 69, 0.16);
+}
+
+.section-top {
+    height: 72px;
+}
+
+.addDisabled {
+    cursor: default;
+    color: #bfcfd5;
+}
+
+table {
+    width: 100%;
+    margin-top: 23px;
+}
+
+.mat-header-row {
+    height: 23px;
+    box-shadow: 0 2px 3px -1px rgba(10, 54, 69, 0.16);
+}
+
+.section-text {
+    display: block;
+    width: 49px;
+    height: 14px;
+    font-size: 14px;
+    margin-top: 14px;
+    margin-left: 16px;
+    color: #0a3645;
+}
+
+.new-category {
+    cursor: pointer;
+    color: #06b4de;
+    height: 10px;
+    font-size: 10px;
+    font-weight: bold;
+    margin-top: 18px;
+    padding-right: 0;
+    text-align: right;
+    position: relative;
+    right: 14.1px;
+}
+
+th {
+    color: #7a8a90;
+    font-size: 9px;
+    font-weight: bold;
+    border: none;
+}
+
+.drag-header {
+    width: 19%;
+    border: none;
+}
+
+.drag-handle {
+    width: 10.6px;
+    height: 9.7px;
+    position: relative;
+    top: -1px;
+    right: 8px;
+    cursor: grab;
+}
+
+.category-header {
+    width: 35%;
+    border: none;
+}
+
+.category-name {
+    width: 62px;
+}
+
+.category-input {
+    width: 80%;
+    border: solid 1px #dbe1e5;
+    background-color: #f9fafc;
+}
+
+.sequence-box {
+    width: 21px;
+    height: 21px;
+    border-radius: 5px;
+    background-color: #98cb65;
+}
+
+.sequence-header {
+    width: 30%;
+    border: none;
+}
+
+.sequence-value {
+    font-size: 12px;
+    font-weight: bold;
+    color: #ffffff;
+    position: relative;
+    top: -2px;
+    left: 7px;
+}
+
+.saveDelete-header {
+    border: none;
+}
+
+.saveDelete-cell {
+    cursor: pointer;
+}
+
+.save-text {
+    position: relative;
+    right: -14.9px;
+    font-weight: bold;
+    color: #06b4de;
+    font-size: 12px;
+    width: 35px;
+    height: 12px;
+}
+
+.delete-icon {
+    position: relative;
+    right: -21.9px;
+}
+
+.mat-cell {
+    border: none;
+}
+
+.even-row {
+    background-color: #f0f2f5;
+}
+
+/* Tablet Styles */
+@media all and (min-width: 768px) {
+    .table-container {
+        padding-left: 13px;
+        padding-right: 13px;
+        max-width: 1262px;
+    }
+
+    .section-text {
+        margin-left: 16px;
+    }
+
+    .drag-header {
+        width: 9%;
+    }
+
+    .category-header {
+        width: 27%;
+    }
+
+    .new-category {
+        right: -22.9px;
+    }
+
+    .category-input {
+        width: 84%;
+    }
+
+    .sequence-header {
+        width: 48%;
+    }
+
+    .save-text {
+        right: -78.9px;;
+    }
+
+    .delete-icon {
+        right: -85.9px;
+    }
+}
+
+/* Zeplin shows iPad width as starting here */
+@media all and (min-width: 1024px) {
+    .new-category {
+        left: 39px;
+    }
+
+    .drag-header {
+        width: 8%;
+    }
+
+    .sequence-header {
+        width: 52%;
+    }
+
+    .save-text {
+        right: -84px;
+    }
+
+    .delete-icon {
+        right: -91px;
+    }
+}
+
+
+@media all and (min-width: 1200px) {
+    .new-category {
+        left: 53px;
+    }
+
+    .save-text {
+        right: -106px;
+    }
+
+    .delete-icon {
+        right: -114px;
+    }
+}
+
+@media all and (min-width: 1600px) {
+    .new-category {
+        left: 58px;
+    }
+
+    .drag-header {
+        width: 7%;
+    }
+
+    .category-header {
+        width: 22%;
+    }
+
+    .sequence-header {
+        width: 62%;
+    }
+
+    .save-text {
+        right: -69px;
+    }
+
+    .delete-icon {
+        right: -76px;
+    }
+}
+
+@media all and (min-width: 1920px) {
+    .new-category {
+        left: 63px;
+    }
+}

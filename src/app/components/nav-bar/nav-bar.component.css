@@ -1,0 +1,111 @@
+.nav-container {
+    padding: 0;
+    max-width: none;
+}
+
+.nav-bar {
+    width: 100%;
+    height: 54px;
+    background-color: #0a3645;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.hamburger-menu {
+    margin-top: 13.4px;
+    margin-right: 66px;
+    margin-left: 4px;
+}
+
+.app-icon {
+    margin-top: 14px;
+    padding-left: 46px;
+}
+
+.nav-block { 
+    width: 95px;
+}
+
+.nav-title {
+    width: 29px;
+    height: 10px;
+    font-size: 10px;
+    text-align: left;
+    color: #90a3aa;
+    line-height: 40px;
+}
+
+.nav-title:first-child {
+    margin-left: 34px;
+}
+
+@media all and (min-width: 768px) {
+    .nav-bar {
+        height: 40px;
+        box-shadow: 0 1px 1px 0 rgba(10, 54, 69, 0.15);
+    }
+
+    .nav-block:hover {
+        background-color: #4a636c;
+        color: white;
+    }
+
+    .app-icon {
+        bottom: 7px;
+        margin-left: 50px;
+    }
+
+    .nav-welcome {
+        font-size: 12px;
+        color: #ffffff;
+        width: 118px;
+        line-height: 40px;
+        position: relative;
+        left: 114px;
+    }
+
+    .context-menu-trigger {
+        height: 5px;
+        width: 9px;
+        margin-left: 10px;
+    }
+}
+
+/* Zeplin shows iPad width starting here */
+@media all and (min-width: 1024px) {
+    .app-icon {
+        margin-left: 172px;
+    }
+
+    .nav-welcome {
+        left: 183px;
+    }
+}
+
+
+@media all and (min-width: 1200px) {
+    .nav-welcome {
+        left: 16px;
+    }
+}
+
+
+@media all and (min-width: 1600px) {
+    .app-icon {
+        left: 250px;
+    }
+
+    .nav-welcome {
+        left: 217px;
+    }
+}
+
+@media all and (min-width: 1920px) {
+    .app-icon {
+        left: 539px;
+    }
+
+    .nav-welcome {
+        left: 376px;
+    }
+}
